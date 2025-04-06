@@ -1,0 +1,11 @@
+{
+    "name": "Layer2 Tooling SDK",
+    "description": "A developer toolkit for building and monitoring L2 rollups and optimistic bridges.",
+    "tags": [
+        "layer2",
+        "infrastructure",
+        "tooling",
+        "sdk",
+        "rollups"
+    ]
+}
