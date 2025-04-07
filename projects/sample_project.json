@@ -1,11 +1,4 @@
 {
     "name": "Layer2 Tooling SDK",
-    "description": "A developer toolkit for building and monitoring L2 rollups and optimistic bridges.",
-    "tags": [
-        "layer2",
-        "infrastructure",
-        "tooling",
-        "sdk",
-        "rollups"
-    ]
+    "description": "We're building a developer-friendly SDK to streamline integration with Layer2 networks like Optimism and Base. It includes tooling for bridging, gas estimation, and rollup-specific features."
 }

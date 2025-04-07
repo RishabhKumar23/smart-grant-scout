@@ -1,20 +1,30 @@
-def match_project_to_grants(project, grants):
-    project_tags = set(project.get("tags", []))
-    matches = []
+# agent/matcher.py
 
+from agent.parser import extract_keywords
+from rapidfuzz import fuzz
+
+FUZZY_THRESHOLD = 75  # percent similarity for fuzzy matches
+
+
+def match_project_to_grants(project: dict, grants: list, threshold: int = 1):
+    """Match project to grants using exact and fuzzy tag matches."""
+    project_keywords = extract_keywords(project["description"])
+
+    scored_matches = []
     for grant in grants:
-        grant_tags = set(grant.get("tags", []))
-        score = len(project_tags & grant_tags)  # simple tag overlap
+        grant_tags = [tag.lower() for tag in grant.get("tags", [])]
+        score = 0
 
-        if score > 0:
-            matches.append(
-                {
-                    "title": grant["title"],
-                    "score": score,
-                    "link": grant["link"],
-                    "tags": list(grant_tags),
-                    "deadline": grant["deadline"],
-                }
-            )
+        for keyword in project_keywords:
+            for tag in grant_tags:
+                if keyword == tag:
+                    score += 2  # Exact match gets higher score
+                else:
+                    similarity = fuzz.partial_ratio(keyword, tag)
+                    if similarity >= FUZZY_THRESHOLD:
+                        score += 1
 
-    return sorted(matches, key=lambda x: x["score"], reverse=True)
+        if score >= threshold:
+            scored_matches.append({**grant, "score": score})
+
+    return sorted(scored_matches, key=lambda g: g["score"], reverse=True)

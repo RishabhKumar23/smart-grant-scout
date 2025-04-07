@@ -1,0 +1,35 @@
+[
+    {
+        "title": "Decentralized Identity SDK",
+        "tags": [
+            "identity",
+            "sdk",
+            "web3"
+        ],
+        "link": "https://gitcoin.co/grants/identity-sdk",
+        "deadline": "2025-04-30",
+        "description": "Supports projects building decentralized identity solutions, DID wallets, and SDKs."
+    },
+    {
+        "title": "Layer2 Infra Grant",
+        "tags": [
+            "layer2",
+            "infrastructure",
+            "rollups"
+        ],
+        "link": "https://gitcoin.co/grants/l2-infra",
+        "deadline": "2025-05-05",
+        "description": "Grants focused on improving infrastructure for L2 rollups and bridges."
+    },
+    {
+        "title": "Community Engagement Campaigns",
+        "tags": [
+            "community",
+            "growth",
+            "engagement"
+        ],
+        "link": "https://gitcoin.co/grants/community-growth",
+        "deadline": "2025-04-25",
+        "description": "Funding for community growth, marketing, and engagement initiatives in DAOs."
+    }
+]

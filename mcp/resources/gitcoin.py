@@ -1,15 +1,23 @@
-def fetch_gitcoin_grants():
+# mcp/resources/gitcoin.py
+
+
+def get_gitcoin_grants() -> list:
+    """Simulated Gitcoin grant fetcher."""
     return [
         {
-            "title": "Infra Grant for L2 Tooling",
-            "tags": ["infrastructure", "layer2", "tooling"],
-            "link": "https://gitcoin.co/grants/infra-l2",
-            "deadline": "2025-05-01",
+            "title": "Layer2 Developer Fund",
+            "description": "Support projects building infrastructure on Optimism and Base.",
+            "tags": ["Layer2", "SDK", "Optimism", "Base", "tooling"],
+            "deadline": "2024-05-15",
+            "link": "https://gitcoin.co/grants/layer2-sdk",
+            "source": "gitcoin",
         },
         {
-            "title": "Community Growth Grant",
-            "tags": ["community", "growth", "marketing"],
-            "link": "https://gitcoin.co/grants/community",
-            "deadline": "2025-04-20",
+            "title": "Decentralized Identity Grant",
+            "description": "Grants for self-sovereign identity projects using zk-proofs.",
+            "tags": ["identity", "zk", "privacy", "decentralization"],
+            "deadline": "2024-06-01",
+            "link": "https://gitcoin.co/grants/identity-zk",
+            "source": "gitcoin",
         },
     ]
