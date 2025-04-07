@@ -1,0 +1,26 @@
+[
+  {
+    "id": "grant_001",
+    "title": "Youth STEM Education Grant",
+    "description": "Funding for organizations improving STEM access.",
+    "funding_amount": 15000,
+    "sector": [
+      "education",
+      "youth"
+    ],
+    "deadline": "2025-05-30",
+    "source_url": "https://example.com/grants/001"
+  },
+  {
+    "id": "grant_002",
+    "title": "Clean Energy Community Grant",
+    "description": "Support for nonprofits promoting renewable energy education.",
+    "funding_amount": 20000,
+    "sector": [
+      "renewable energy",
+      "education"
+    ],
+    "deadline": "2025-06-15",
+    "source_url": "https://example.com/grants/002"
+  }
+]

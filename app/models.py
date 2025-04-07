@@ -14,12 +14,11 @@ class GrantPreferences(BaseModel):
     interests: List[str]
 
 
-class SearchQuery(BaseModel):
-    query: str
-    timestamp: str
-
-
-class MCPContext(BaseModel):
-    user_profile: Optional[UserProfile] = None
-    grant_preferences: Optional[GrantPreferences] = None
-    search_history: List[SearchQuery] = []
+class Grant(BaseModel):
+    id: str
+    title: str
+    description: str
+    funding_amount: Optional[int]
+    sector: List[str]
+    deadline: Optional[str]
+    source_url: Optional[str]

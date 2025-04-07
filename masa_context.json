@@ -1,0 +1,18 @@
+{
+  "masa_user_0x123": {
+    "user_profile": {
+      "org_name": "SolarYouth",
+      "location": "Texas",
+      "sector": "Youth Education"
+    },
+    "grant_preferences": {
+      "min_amount": 5000,
+      "max_amount": 20000,
+      "interests": [
+        "education",
+        "renewable energy"
+      ]
+    },
+    "search_history": []
+  }
+}
