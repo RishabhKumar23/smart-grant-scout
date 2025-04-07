@@ -1,4 +1,0 @@
-{
-    "name": "Layer2 Tooling SDK",
-    "description": "We're building a developer-friendly SDK to streamline integration with Layer2 networks like Optimism and Base. It includes tooling for bridging, gas estimation, and rollup-specific features."
-}
