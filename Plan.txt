@@ -1,0 +1,97 @@
+### 🚀 **7-Day Development Plan: Crypto Sentiment Trading Bot (Masa x MCP)**
+
+#### **Day 1: Project Setup & Data Pipeline Kickoff**
+- ✅ Set up GitHub repo (monorepo: `backend` in Python, `frontend` in Next.js).
+- ✅ Define file structure and core packages (Poetry or pipenv for Python, Tailwind + TypeScript for Next.js).
+- ✅ Initialize MCP client and scrape test sentiment data from **X** (via API or headless browser).
+- ✅ Explore MASA API Search Dashboard: https://data.dev.masalabs.ai/dashboard  
+- ✅ Test endpoint calls with Postman/cURL.
+
+---
+
+#### **Day 2: Real-Time Sentiment Scraper (Python)**
+- ✅ Build Python service to:
+  - Scrape crypto-related posts from X (Twitter/X API or scraping tool).
+  - Use keyword filters (e.g., BTC, ETH, #Bitcoin, $SOL).
+  - Process and store timestamped sentiment scores.
+- ✅ Integrate MASA API for data enrichment (pull price trends or token metrics).
+- ✅ Store data in local SQLite or Firestore for fast iteration.
+
+---
+
+#### **Day 3: MCP Integration & Context Layer**
+- ✅ Create MCP client that:
+  - Queries MASA's search endpoint.
+  - Embeds MASA results as additional context for decision-making.
+- ✅ Normalize context into usable format for the AI model.
+- ✅ Start building basic `agent.py` for decision flow (sentiment + context → signal).
+
+---
+
+#### **Day 4: AI Agent (Signal Generation)**
+- ✅ Build simple model or logic-based classifier:
+  - Use rolling sentiment + MASA price context to trigger BUY/SELL/HOLD.
+  - Options: LSTM, logistic regression, or rule-based scoring.
+- ✅ Backtest strategy on 3–7 days of collected data.
+- ✅ Store logs + signals to disk or DB.
+
+---
+
+#### **Day 5: Trading Engine + Simulation**
+- ✅ Simulate crypto trades using a sandboxed exchange wrapper (CCXT, custom sim engine).
+- ✅ Validate agent behavior (risk management, thresholds, stop-loss logic).
+- ✅ Log simulated portfolio value over time.
+- ✅ Begin planning UI wireframes in Figma or directly in code.
+
+---
+
+#### **Day 6: Frontend in Next.js**
+- ✅ Create basic dashboard in Next.js:
+  - Live sentiment feed.
+  - Signal display (BUY/SELL/HOLD).
+  - Portfolio simulation results.
+  - Context explanation (from MCP/MASA).
+- ✅ Use Tailwind + charts (e.g., Recharts or Chart.js).
+- ✅ Connect backend API endpoints to frontend for live data.
+
+---
+
+#### **Day 7: Final Polish & Hosting**
+- ✅ Set up deployment:
+  - Python backend on Render, Railway, or fly.io.
+  - Next.js frontend on Vercel.
+- ✅ Add authentication or API key gating if needed.
+- ✅ Final testing of end-to-end flow.
+- ✅ Polish GitHub README and documentation.
+- ✅ Record demo (screen recording) and prep for submission.
+
+---
+
+### 🎁 Deliverables by End of Week
+- ✅ Fully functioning trading bot with real sentiment + MASA data
+- ✅ MCP-enhanced decision logic
+- ✅ Web dashboard in Next.js showing signals and trades
+- ✅ Hosted backend and frontend
+- ✅ GitHub repo with full documentation
+- ✅ Optional: PDF slide deck for demo/competition judges
+
+---
+
+
+crypto-sentiment-bot/
+├── backend/               # Python backend: scraping, MCP, MASA, AI agent
+│   ├── main.py
+│   ├── agent/
+│   ├── data/
+│   ├── mcp/
+│   ├── masa/
+│   ├── utils/
+│   └── requirements.txt
+├── frontend/              # Next.js frontend (dashboard)
+│   ├── pages/
+│   ├── components/
+│   ├── public/
+│   ├── styles/
+│   └── package.json
+├── README.md
+└── .gitignore
